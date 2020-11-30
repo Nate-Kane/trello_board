@@ -1,0 +1,8 @@
+<h1>Make a new baord</h1>
+<%= form_with(model: @board, local: true) do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, placeholder: "What do you want to name this board?" %>
+  </div>
+  <%= f.submit %>
+<% end %>
