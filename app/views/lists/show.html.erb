@@ -1,0 +1,5 @@
+<h4><%= @list.task %></h4>
+<br/>
+<h5><%= link_to "Edit task", edit_board_list_path(@list) %>
+<h5><%= link_to "Delete task", [@board, @list], method: :delete %>
+<h5><%= link_to "Back to '#{@board.name}' ", @board %></h5>

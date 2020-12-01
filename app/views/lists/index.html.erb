@@ -1,0 +1,7 @@
+<h1>Click an task To View It</h1>
+<ul>
+  <% @lists.each do |list| %>
+    <li><%= link_to list.task, [@board, list] %></li>
+  <% end %>
+</ul>
+<%= link_to 'Make a new task', new_board_list_path(@board) %>

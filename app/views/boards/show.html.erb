@@ -1,4 +1,18 @@
-<h2><%= "#{@board.name}" %></h2>
+<style>
+  body {text-align: center;}
+</style>
+<body>
+<h3><%= "#{@board.name}" %></h3>
+
 <br/>
-<h5> <%= link_to "Delete board", @board, method: :delete %> <h5>
-<h4> <%= link_to "Back to boards", boards_path %> </h4>
+    <div class="tasks">
+       <% @board.lists.each do |list| %>
+        <%= link_to "#{list.task}", [@board, list] %>
+         <br/>
+        <% end %>
+    </div>
+<br/>
+
+</body>
+
+<!-- Here I need to add the ruby to display of the tasks for this specific board. -->

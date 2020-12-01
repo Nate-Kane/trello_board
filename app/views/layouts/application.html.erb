@@ -10,7 +10,47 @@
     <%# <%= javascript_include_tag :application %> <!-- and the second ending here too. -->
   </head>
 
+
+
   <body>
+    <br/>
+    <button><%= link_to "Log Out", destroy_user_session_path, method: :delete %></button>
+    <button><%= link_to "Boards", boards_path %></button>
+    <button><%= link_to "Make a new board", new_board_path %></button>
     <%= yield %>
   </body>
 </html>
+
+ <style>
+  body {
+    text-align: center;
+    background-color: seashell;
+  }
+
+  h1 {
+    color: darkslategray;
+  }
+
+  button {
+    border-radius: 12px;
+    border: none;
+    background-color: seashell;
+    font-size: 18px;
+  }
+
+  button:hover {
+    border-radius: 8px;
+    border: none;
+    background-color: blanchedalmond;
+    font-size: 18px;
+    opacity: 1;
+  }
+
+  .tasks {
+    color: red;
+  }
+
+  h3 {
+    color: cadetblue;
+  }
+</style>
