@@ -6,5 +6,5 @@
 </pre>
 <h3><%= @list.task %></h3>
 <br/>
-<button><%= link_to "Edit task", edit_board_list_path(@list) %></button>
+<button><%= link_to "Edit task", edit_board_list_path(@board) %></button>
 <button><%= link_to "Delete task", [@board, @list], method: :delete %></button>
