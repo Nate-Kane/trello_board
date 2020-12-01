@@ -44,6 +44,7 @@ class BoardsController < ApplicationController
     end
 
     def set_board
-      @board = current_user.boards.find(params[:id])
+      # @board = current_user.boards.find(params[:id])
+      @board = Board.single_board(current_user.id, params[:id])
     end
 end

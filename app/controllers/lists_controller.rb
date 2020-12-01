@@ -45,7 +45,9 @@ class ListsController < ApplicationController
     end
 
     def set_list
-      @list = List.find(params[:id])
+      # @list = List.find(params[:id])
+
+      @list = List.single_list(current_user.id, params[:id])
     end
 
     def list_params
