@@ -1,5 +1,10 @@
-<h4><%= @list.task %></h4>
+<pre>
+
+
+<hr size="5px" color="cadetblue" width="1200px" />
+<button class="back_button"><%= link_to "Back to tasks", @board %></button>
+</pre>
+<h3><%= @list.task %></h3>
 <br/>
-<h5><%= link_to "Edit task", edit_board_list_path(@list) %>
-<h5><%= link_to "Delete task", [@board, @list], method: :delete %>
-<h5><%= link_to "Back to '#{@board.name}' ", @board %></h5>
+<button><%= link_to "Edit task", edit_board_list_path(@list) %></button>
+<button><%= link_to "Delete task", [@board, @list], method: :delete %></button>

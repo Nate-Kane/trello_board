@@ -1,16 +1,19 @@
-<style>
-  body {text-align: center;}
-</style>
-<body>
-<h3><%= "#{@board.name}" %></h3>
-
+<h1><%= "#{@board.name}" %></h1>
+<hr size="5px" color="cadetblue" width="1200px" />
+<h3>Here are your tasks...</h3>
+<button class="back_button"><%= link_to "Back to boards", boards_path %></button>
+<button class="back_button"><%= link_to "Make a new task", new_board_list_path(@board) %></button>
 <br/>
-    <div class="tasks">
+<br/>
+    <ul>
        <% @board.lists.each do |list| %>
-        <%= link_to "#{list.task}", [@board, list] %>
-         <br/>
-        <% end %>
-    </div>
+        <li><div class="tasks"><%= list.task %></div></li>
+         <button><%= link_to "View", [@board, list] %></button>
+         <button><%= link_to "Delete", [@board, @list], method: :delete %></button>
+            <br/>
+       <% end %>
+    </ul>
+
 <br/>
 
 </body>

@@ -28,7 +28,7 @@ class ListsController < ApplicationController
 
   def update
     if @list.update(list_params)
-      redirect_to @board
+      redirect_to [@board, @list]
     else
       render :edit
     end
